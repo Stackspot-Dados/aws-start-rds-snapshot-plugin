@@ -12,6 +12,11 @@ resource "aws_iam_role" "iam_for_lambda" {
       },
       "Effect": "Allow",
       "Sid": ""
+    },
+    {
+        "Action": ["rds:DeleteDBSnapshot", "rds:DeleteDBClusterSnapshot", "rds:CreateDBSnapshot", "rds:CreateDBClusterSnapshot"],
+        "Effect": "Allow",
+        "Resource: "*"
     }
   ]
 }
